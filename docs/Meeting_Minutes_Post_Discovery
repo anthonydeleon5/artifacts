@@ -1,0 +1,20 @@
+# Meeting Minutes: Post-Discovery Scan Review
+
+**Date:** February 25, 2026  
+**Attendees:** Anthony De Leon, Marcus Chen.
+
+## Agenda
+1. Review findings from the Initial Discovery Scan.
+2. Confirm ownership of identified vulnerabilities.
+3. Decide on "Fix vs. Remove" for unauthorized software.
+
+## Key Discussion Points
+* **Unauthorized Software:** The scan identified a Critical vulnerability in an old version of Wireshark (v2.2.x). 
+* **Risk Assessment:** Marcus Chen confirmed Wireshark was left over from a previous troubleshooting session and is no longer needed for business operations.
+
+## Decisions Made
+* **Remediation Strategy:** Rather than patching Wireshark, the team decided to **uninstall** it entirely to reduce the attack surface.
+* **Priority:** Prioritize Wireshark removal first, followed by Windows OS updates.
+
+## Action Items
+* **Server Team:** Perform uninstallation of Wireshark and Ethereal by EOD.
