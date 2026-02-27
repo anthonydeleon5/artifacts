@@ -1,0 +1,24 @@
+# Change Request & CAB Approval Summary
+
+**Change ID:** CR-2026-VULN-001  
+**Status:** Approved  
+**Date:** February 26, 2026
+
+## Change Description
+Deployment of Microsoft Windows Security Updates and Registry Hardening (`EnableCertPaddingCheck`) to address Critical CVEs identified in recent scans.
+
+## Risk Assessment
+* **Impact Level:** Medium (Requires system reboot).
+* **Mitigation:** A full **VM Snapshot** will be taken prior to the update to ensure 100% recovery in the event of a system crash.
+
+## Implementation Plan
+1. Snapshot target VM.
+2. Run Windows Update and apply all "Critical" and "Security" patches.
+3. Manually apply registry fix for `CertPaddingCheck`.
+4. Reboot and verify service availability.
+
+## Rollback Plan
+If services do not resume within 15 minutes of reboot, the team will revert to the VM Snapshot taken at 17:30.
+
+## Approval
+**Approved by:** Sarah Jenkins (IT Manager / Change Advisory Board)
